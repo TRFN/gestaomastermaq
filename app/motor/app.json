@@ -1,23 +1,62 @@
 {
     "versao": "1.2.0.0",
     "https": true,
-    "404": "default",
+    "404": "inicio",
     "minify": true,
     "vars": {
-
+        "nomeapp": "Mastermaq Assistencia Técnica (area restrita)",
+        "cortema": "50, 50, 50",
+        "logo-img": "/images/logo.png",
+        "input-error": "_none_",
+        "debug": "",
+        "mensagem-aviso": "",
+        "mensagem-erro": "",
+        "scriptextra": "",
+        "onchange": "",
+        "menu": "elementos/menu",
+        "titulo": "",
+        "email-conectado": ""
     },
     "paginas": {
         "default": {
-            "caminho": ["/"],
-            "layout": "It's Working!",
+            "caminho": ["/login"],
+            "layout": "paginas/login",
+            "modelo": false,
+            "scripts": [],
+            "styles": ["global"],
+            "controle": "login",
+            "type": "text/html",
+            "persistente": true,
+            "minify": true,
+            "variaveis": {
+                "formulario": "formularios/login"
+            }
+        },
+        "página de logout": {
+            "caminho": ["/sair"],
+            "layout": false,
             "modelo": false,
             "scripts": [],
             "styles": [],
-            "controle": false,
-            "type": "text/plain",
+            "controle": "logout",
+            "type": "text/html",
             "persistente": true,
-            "minify": false,
+            "minify": true,
             "variaveis": {}
+        },
+        "inicio": {
+            "caminho": ["/","/home"],
+            "layout": "paginas/index",
+            "modelo": "template",
+            "scripts": [],
+            "styles": ["global"],
+            "controle": false,
+            "type": "text/html",
+            "persistente": true,
+            "minify": true,
+            "variaveis": {
+
+            }
         }
     }
 }

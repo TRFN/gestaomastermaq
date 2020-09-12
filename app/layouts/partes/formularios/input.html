@@ -1,0 +1,34 @@
+<div class="form-group %tamanho%">
+    <label>%titulo%</label>
+    <input
+        class="form-control %classes%"
+        name="%id%"
+        id="%id%"
+        type="%tipo%"
+        value="%valorpadrao%"
+        autocomplete="off"
+        />
+    <p class="help-block">%ajuda%</p>
+</div>
+
+<script>
+    window.steps.push(()=>{
+        json_attr = false;
+        try {
+            json_attr = JSON.parse('%attr-%id%%');
+        } catch(e) {
+            json_attr = false;
+        }
+        if(json_attr !== false){
+            dataInputs = ["minDate","maxDate","currentDate"]; /* Configurações de inputs de data */
+            for(i in json_attr){
+                dataInputs.indexOf(i) != -1
+                    ? (ob={},ob[i]=(new Date(json_attr[i] + " 00:00:00 GMT-0300")),$(".form-group #%id%.form-control").data("datepicker").update(ob))
+                    : $(".form-group #%id%.form-control").attr(i, json_attr[i]);
+                if(i=="currentDate"){
+                    $(".form-group #%id%.form-control").data('datepicker').selectDate(new Date(json_attr[i] + " 00:00:00 GMT-0300"));
+                }
+            }
+        }
+    });
+</script>

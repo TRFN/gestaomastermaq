@@ -1,0 +1,61 @@
+{
+    "contem": {
+        "1": {
+            "layout": "partes/menu/unico",
+            "vars": {
+                "classes": "",
+                "icone": "dashboard",
+                "texto": "Início",
+                "link": "/home"
+            }
+        },
+        "2": {
+            "layout": "partes/menu/sub2",
+            "vars": {
+                "classes": "",
+                "icone": "users",
+                "texto": "Usuários",
+                "sub_texto1": "Adicionar Conta",
+                "sub_texto2": "Gerir Contas",
+                "link1": "/contas/adicionar",
+                "link2": "/contas/gerir"
+            }
+        },
+        "3": {
+            "layout": "partes/menu/sub2",
+            "vars": {
+                "classes": "",
+                "icone": "address-book-o",
+                "texto": "Ordens de Serviço",
+                "sub_texto1": "Abertura",
+                "sub_texto2": "Gerir O.S",
+                "link1": "/os/nova",
+                "link2": "/os/gerir"
+            }
+        },
+        "4": {
+            "layout": "partes/menu/sub3",
+            "vars": {
+                "classes": "",
+                "icone": "lightbulb-o",
+                "texto": "Estoque",
+                "sub_texto1": "Cadastrar",
+                "sub_texto2": "Gerenciar",
+                "sub_texto3": "Vender",
+                "link1": "/estoque/cad",
+                "link2": "/estoque/gerir",
+                "link3": "/estoque/venda"
+            }
+        },
+        "5": {
+            "layout": "partes/menu/unico",
+            "vars": {
+                "classes": "",
+                "icone": "money",
+                "texto": "Financeiro",
+                "link1": "/financeiro"
+            }
+        }
+    },
+    "montagem": ["1","2","3","4","5"]
+}
